@@ -1,0 +1,102 @@
+#include<iostream>
+using namespace std;
+class Box
+{
+private:
+int a;
+int b;
+int c;
+string name;
+public:
+Box();
+Box(int x,int y,int z,string Nm);
+void setA(int p);
+int getA();
+void setB(int p);
+int getB();
+void setC(int p);
+int getC();
+void setName(string p);
+string getName();
+double Volume();
+void info();
+double Area();
+};
+Box::Box()
+{
+a=0;
+b=0;
+c=0;
+name="Unknow";
+}
+Box::Box(int x,int y,int z,string Nm)
+{
+a=x;
+b=y;
+c=z;
+name=Nm;
+}
+ void Box::setA(int p)
+ {
+ a=p;
+ }
+ int Box::getA()
+ {
+ return a;
+ }
+ void Box::setB(int p)
+ {
+ b=p;
+ }
+ int Box::getB()
+ {
+ return B;
+ }
+ void Box::setC(int p)
+ {
+ c=p;
+ }
+ int Box::getC()
+ {
+ return c;
+ }
+ void Box::setName(string p)
+ {
+ name=p;
+ }
+ string Box::getName()
+ {
+ return name;
+ }
+ double Box::Volume()
+ {
+ return a*b*c;
+ }
+ double Box::Area()
+ {
+ return 2*(a*b+b*c+c*a);
+ }
+ void Box ::info()
+ {
+ cout << "a=" << a <<endl;
+ cout << "b=" << b << endl;
+ cout << "c=" << c << endl;
+ cout << "Name=" << name << endl;
+ cout << "Area=" << Area() << endl;
+ cout << "Volume" << Volume() << endl;
+ }
+ int main ()
+ {
+ Box A;
+ A.setA(14);
+ A.setB(21);
+ A.setC(7);
+ A.setName("Atanas");
+ A.info();
+ cout << endl;
+ Box B(7,30,17,"Nikoleta");
+ B.info();
+ return 0;
+ }
+ 
+ 
